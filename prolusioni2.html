@@ -1,0 +1,341 @@
+<!DOCTYPE HTML><html xmlns="http://www.w3.org/1999/xhtml" xmlns:tei="http://www.tei-c.org/ns/1.0">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Prolusioni</title>
+      <style>
+		body
+		{
+			background-color : #FFDB70;
+		}
+	
+		h2
+		{
+			margin-top : 100px;
+		}
+	
+		.dx, .pagina
+		{
+			float : right;
+		}
+		
+		.foglio, .pagina
+		{
+			width : 500px;
+			heigth : auto;
+		}
+		
+		.foglio
+		{
+			clear : both;
+		}
+		
+		.pagina
+		{
+			background-color : white;
+		}
+		
+		#it p
+		{
+			margin-top : 100px;
+		}
+		
+		@media (max-width : 1500px)
+		{
+			.pagina
+			{
+				width : 28%;
+				heigth : auto;
+			}
+		
+			#it p
+			{
+				margin-top : 80px;
+			}
+		}
+		
+		@media (max-width : 1200px)
+		{
+			.pagina
+			{
+				width : 25%;
+				heigth : auto;
+			}
+		
+			#it p
+			{
+				margin-top : 50px;
+			}
+		}
+	</style><script src="jquery.js"></script><script>
+	//Funzioni di utilità
+	
+		//Toglie i primi n caratteri da una stringa
+		function noprimicaratteri(stringa, numero = 1)
+		{
+			return(stringa.substring(numero, stringa.length) );
+		}
+		
+		//Inserisce le coordinate nel tag area
+		function inserimento_coordinate(nome_paragrafo, altezza_inizio, altezza_fine)
+		{
+			$("#" + nome_paragrafo).attr("coords", "0," + altezza_inizio + ",500," + altezza_fine);
+		}
+		
+		//Cambia i dati CSS in modo da far apparire una cornice
+		function attiva_cornice(id_cliccabile, id_cercato)
+		{
+			if(id_cliccabile == id_cercato)
+			{
+				var relativo_paragrafo = noprimicaratteri(id_cliccabile, 3);
+				var selettore_fr = "#" + relativo_paragrafo;
+				var selettore_it = "#it" + relativo_paragrafo;
+				
+				$(selettore_fr).css("border-style", "solid");
+				$(selettore_fr).css("border-color", "coral");
+				
+				$(selettore_it).css("border-style", "solid");
+				$(selettore_it).css("border-color", "coral");
+				
+				
+			}
+		}
+		
+		//Toglie la cornice
+		function disattiva_cornice(id_cliccabile, id_cercato)
+		{
+			if(id_cliccabile == id_cercato)
+			{
+				var relativo_paragrafo = noprimicaratteri(id_cliccabile, 3);
+				var selettore_fr = "#" + relativo_paragrafo;
+				var selettore_it = "#it" + relativo_paragrafo;
+				
+				$(selettore_fr).css("border-style", "solid");
+				$(selettore_fr).css("border-color", "white");
+				
+				$(selettore_it).css("border-style", "solid");
+				$(selettore_it).css("border-color", "white");
+			}
+		}
+		
+		//Operazioni da eseguire quando la pagina è pronta
+		$(document).ready(function()
+		{
+			inserimento_coordinate("facp1-1", 0, 410);
+			inserimento_coordinate("facp1-2", 410, 480);
+			inserimento_coordinate("facp1-3", 480, 630);
+			inserimento_coordinate("facp1-4", 630, 1000);
+			
+			inserimento_coordinate("facp2-1", 80, 235);
+			inserimento_coordinate("facp2-2", 235, 500);
+			inserimento_coordinate("facp2-3", 500, 1000);
+	
+		//Se il mouse va sopra alcuni elementi, esegue delle istruzioni
+			
+			//Se il mouse va sopra un elemento cliccabile, lo evidenzia
+			$(".cliccabile").mouseover(function()
+			{
+				var id_corrente = $(this).attr("id");
+				
+				attiva_cornice(id_corrente, "facp1-1");
+				attiva_cornice(id_corrente, "facp1-2");
+				attiva_cornice(id_corrente, "facp1-3");
+				attiva_cornice(id_corrente, "facp1-4");
+				
+				attiva_cornice(id_corrente, "facp2-1");
+				attiva_cornice(id_corrente, "facp2-2");
+				attiva_cornice(id_corrente, "facp2-3");
+			});
+			
+			$(".cliccabile").mouseleave(function()
+			{
+				var id_corrente = $(this).attr("id");
+				
+				disattiva_cornice(id_corrente, "facp1-1");
+				disattiva_cornice(id_corrente, "facp1-2");
+				disattiva_cornice(id_corrente, "facp1-3");
+				disattiva_cornice(id_corrente, "facp1-4");
+				
+				disattiva_cornice(id_corrente, "facp2-1");
+				disattiva_cornice(id_corrente, "facp2-2");
+				disattiva_cornice(id_corrente, "facp2-3");
+			});
+		});
+		
+		
+		/*var id = $(this).attr("id");
+				alert(id);*/
+	</script></head>
+   <body>
+      <h1 class="cliccabile">
+         					<br>PROLUSIONI ALL’UNIVERSITÀ DI GINEVRA 91Aaaa001
+         					<br>PRIME TRE CONFERENZE.
+         					<br>Lezioni del 06 novembre 1891 – 10 novembre 1891 - *13 novembre 1891
+         					<br>Versione XML-TEI</h1>
+      <p class="dx">Codifica digitale realizzata da
+         							Andrea Meglio
+         						</p>
+      <h2>Informazioni sulla pubblicazione</h2>
+      <p>
+         					Edizioni francese: Bouquet-Engler 2002: pp. 143-172 (Utilizzata qui);
+         Engler 1967-74: 3283-3285.
+         Traduzione italiana: basata sull’edizione Bouquet-Engler (2002), con note di commento parziale
+         in E. Fadda 2006: pp. 85-121.
+         Manoscritto: BGE Ms. fr. 3951/1.1-3; la sequenza deve essere quella indicata con cifre
+         arabe nel manoscritto.
+         Imm. Facsimili 3951/1.1: https://archives.bge-geneve.ch/ark:/17786/vtae78f994bf3242bef/dao/0/1
+         Imm. Facsimili 3951/1.2 : https://archives.bge-geneve.ch/ark:/17786/vtae78f994bf3242bef/dao/0/85</p>
+      <h2>Informazioni sul documento e sul testo</h2>
+      <p>Tipo: Appunti per le prime conferenze all’Università di Ginevra, in parte utilizzati
+         per le prime lezioni del corso di Phonétique du grec et du latin 1891. Probabilmente
+         destinati alla pubblicazione di una brochure.
+         Date delle prime tre lezioni del corso di Phonétique du grec et du latin ricostruite
+         cfr. Chidichimo,
+         2009, CFS 62.
+         Testo in redazione quasi finale, con correzioni, cancellature, aggiunte interlineari
+         e frasi incomplete.
+         Edizioni francese:
+         Bouquet-Engler 2002: pp. 143-172 (Utilizzata qui);
+         Engler 1967-74: 3283-3285.
+         Traduzione italiana: basata sull’edizione Bouquet-Engler (2002), con note di commento
+         parziale
+         in E. Fadda 2006: pp. 85-121.
+         Studi critici: AA.VV., 2009, «Sur Saussure à Genève en 1891», in Cahiers Ferdinand
+         de Saussure
+         67, pp. 217-312.</p>
+      <h2>Visualizzazione del documento e del testo</h2>
+      <p>Cliccare su un punto dell'immagine per vedere i riferimenti</p>
+      <h3>Pagina 1</h3>
+      <img id="p1" class="foglio" src="p1.jpg" usemap="#facp1">
+      <map id="facp1" name="facp1">
+         <area id="facp1-1" class="cliccabile" shape="rect">
+         
+         <area id="facp1-2" class="cliccabile" shape="rect">
+         
+         <area id="facp1-3" class="cliccabile" shape="rect">
+         
+         <area id="facp1-4" class="cliccabile" shape="rect">
+         
+         </map><div id="it" class="pagina">
+         <p id="itp1-1">Se, come abbiamo appurato, nessuna
+            interruzione, nessuna scissione, nessuno iato è
+            immaginabile nella tradizione della lingua, se è vero
+            che la lingua del giorno dopo è sempre esistita, nella
+            stessa forma, il giorno prima, ci si domanda com’è
+            che noi non parliamo oggi il latino che parlava
+            Giulio Cesare, e com’è che Giulio Cesare non abbia
+            parlato l’indoeuropeo dei suoi primi antenati.</p>
+         <p id="itp1-2">Mio Dio, sono persuaso che questa sia un po’ la
+            storia di tutto ciò che vediamo accadere attorno a
+            noi e in noi stessi.</p>
+         <p id="itp1-3">Un tipo originale di nome
+            Boguslawski ha ultimamente annunciato in una città
+            della Russia, l’apertura di un’esposizione di nuovo
+            genere: si trattava semplicemente di 480 ritratti
+            fotografici rappresentanti tutti la stessa persona, cioè
+            lo stesso Boguslawski, e sempre nella stessa posa.</p>
+         <p id="itp1-4">Da vent’anni, con regolarità ammirevole, il primo
+            e il quindici di ogni mese, quest’uomo votato alla
+            scienza si recava dal suo fotografo, e si trovava ora
+            in condizione di far godere il pubblico del frutto
+            accumulato delle
+            
+            sue fatiche.</p>
+         <p id="itp2-1">Non ho bisogno di
+            dirvi che, se in quest’esposizione si prendessero due
+            fotografie contigue qualsiasi sulla parete, si avrebbe
+            lo stesso Boguslawski, ma se si prendessero la
+            n°480 e la n° 1 si avrebbero due Boguslawski.</p>
+         <p id="itp2-2">Ugualmente, se si fosse potuto non fotografare, ma
+            fonografare giorno per giorno dall’origine tutto ciò
+            che è stato espresso verbalmente sul pianeta o su
+            una parte di esso, si avrebbero delle immagini di
+            lingua sempre rassomigliantisi da un giorno
+            all’altro, ma considerevolmente differenti e a volte
+            differenti in modo incalcolabile di 500 in 500 anni,
+            o anche di 100 in 100 anni.</p>
+         <p id="itp2-3">Arriviamo così al secondo principio, di valore
+            universale come il primo, il cui possesso può far
+            conoscere quel che è la storia delle lingue: è il punto
+            di vista del movimento della lingua nel tempo, ma di
+            un movimento che a nessun momento, giacché tutto
+            è lì, arriva ad essere in conflitto col primo principio
+            dell’unità della lingua nel tempo.</p>
+      </div>
+      <div id="fr" class="pagina">
+         <p id="p1-1">
+            						<br>Si, comme nous venons de le poser en fait, au-
+            						<br>cune interruption, aucune scission, aucun
+            						<br>hiatus n’est imaginable dans la
+            						<br>tradition  de la langue, s’il est  vrai que
+            						<br>la langue 
+            						<br>du lendemain 
+            						<br>a toujours 
+            						<br>existé 
+            						<br>la 
+            						<br>veille 
+            						<br>
+            						<br>sous la même forme, on demande comment il se fait que nous ne parlions
+            						<br>pas aujourd’hui le latin que parlait 
+            						<br>Jules César, comment  il se fait que Jules
+            						<br>César  n’ait pas parlé l’indo-européen
+            						<br>de ses premiers ancêtres.</p>
+         <p id="p1-2"> Mon Dieu, je suis persuadé que ceci est
+            						<br>un peu l’histoire de tout ce que nous voyons
+            						<br>se passer autour de nous ou en nous-mêmes.</p>
+         <p id="p1-3">
+            						<br>Un original nommé Boguslawski a dernièrement fait annoncer dans une
+            						<br>ville de Russie l’ouverture d’une exposition
+            						<br>d’un nouveau genre : c’étaient simplement
+            						<br>480 portraits photographiques, 
+            						<br>représentant tous la même personne, lui,
+            						<br>Boguslawski, et identiquement dans la même pose.</p>
+         <p id="p1-4">
+            						<br>Depuis 20 ans avec une régularité ad
+            						<br>mirable, le premier et le quinze de chaque mois, cet homme dévoué à la science se rendaitchez son photographe,
+            						<br>et il se trouvait maintenant en état de faire
+            						<br>profiter le public du fruit accumulé de
+            						
+            				
+            						<br>ses labeurs.</p>
+         <p id="p2-1">
+            						<br>Jen’ai pas besoin de vous dire que,
+            						<br>si dans cette exposition on prenait sur la paroi 2 photo
+            						<br>graphies contiguës quelconques, on avait
+            						<br>le même Boguslawski, mais que si
+            						<br>l’on prenait le n°480 et le n°1 on
+            						<br>avait 2 Boguslawski.</p>
+         <p id="p2-2"> _ De même, 
+            						<br>si l’on avait pu non pas photographier mais phonographier,
+            						<br>au jour le jour dès l’origine, tout ce qui a été exprimé
+            						<br>en parole sur le globe ou sur une partie du
+            						<br>globe, on aurait des images de langue toujours
+            						<br>ressemblantes d’un jour à l’autre, mais
+            						<br>considérablement  différentes et parfois
+            						<br>incalculablement différentes de 500 ans en 500
+            						<br>ans, ou même de 100 ans à 100 ans.</p>
+         <p id="p2-3">
+            						<br>Nous arrivons ainsi au second
+            						<br>principe , de valeur universelle comme le premier,
+            						<br>
+            						<br>dont la possession  peut faire connaître ce qu’est l’histoire des langues : c’est le point
+            						<br>de vue  du 
+            						<br>mouvement de la langue dans le temps, mais
+            						<br>d’un mouvement ou qui à aucun
+            						<br>moment, car tout est là, n’arrive à
+            						<br>être en conflit avec le premier principe de l’unité de la langue dans le temps.</p>
+      </div>
+      <h3>Pagina 2</h3>
+      <img id="p2" class="foglio" src="p2.jpg" usemap="#facp2">
+      <map id="facp2" name="facp2">
+         <area id="facp2-1" class="cliccabile" shape="rect">
+         
+         <area id="facp2-2" class="cliccabile" shape="rect">
+         
+         <area id="facp2-3" class="cliccabile" shape="rect">
+         
+         </map><h2>Parole chiave</h2>
+      <h3>Termini e sintagmi tecnici</h3>tradition<br>langue<br>langue<br>forme<br>parlions<br>histoire<br>portraits photographiques<br>science<br>photographe<br>photo
+      						<br>graphies<br>photographier<br>phonographier<br>origine<br>parole<br>images de langue<br>principe<br>valeur universelle<br>l’histoire des langues<br>point<br>de vue<br>mouvement de la langue dans le temps<br>principe<br>unité de la langue dans le temps.<br><h3>Nomi di persona trovati nel testo</h3>Virgile<br>Jules César<br>Jules
+      						<br>César<br>Boguslawski<br>Boguslawski<br>Bogu
+      						<br>slawski<br>Boguslawski<br>Boguslawski<br><h3>Parole straniere o che indicano altre lingue</h3>latin<br>indo-européen<br><h3>Luoghi</h3>Allemagne<br>Russie<br></body>
+</html>

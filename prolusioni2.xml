@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE TEI SYSTEM "./tei_all.dtd">
+
+<TEI version = "4.3.0" xmlns = "http://www.tei-c.org/ns/1.0">
+	<teiHeader xml:lang = "it">
+		<fileDesc>
+			<titleStmt>
+				<title>
+					<lb />PROLUSIONI ALL’<orgName>UNIVERSITÀ DI GINEVRA</orgName> 91Aaaa001
+					<lb />PRIME TRE CONFERENZE.
+					<lb />Lezioni del <date when="1891-11-06">06 novembre 1891</date> – <date when="1891-11-10">10 novembre 1891</date> - <date when="1891-11-13">*13 novembre 1891</date>
+					<lb />Versione XML-TEI</title>
+					<author xml:id = "FDS">
+						<persName>Ferdinand de Saussure</persName>
+						<date from="1857" to="1913">(1857-1913)</date>
+					</author>
+						
+					<respStmt>
+						<resp>Codifica digitale realizzata da</resp>
+						<name xml:id = "AM">
+							<persName>Andrea Meglio</persName>
+						</name>
+					</respStmt>
+				</titleStmt>
+					
+				<publicationStmt>
+					<p>
+					Edizioni francese: Bouquet-Engler <date when = "2002">2002</date>: pp. 143-172 (Utilizzata qui);
+Engler 1967-74: 3283-3285.
+Traduzione italiana: basata sull’edizione Bouquet-Engler (<date when = "2002">2002</date>), con note di commento parziale
+in E. Fadda <date when = "2006">2006</date>: pp. 85-121.
+Manoscritto: BGE Ms. fr. 3951/1.1-3; la sequenza deve essere quella indicata con cifre arabe nel manoscritto.
+Imm. Facsimili 3951/1.1: https://archives.bge-geneve.ch/ark:/17786/vtae78f994bf3242bef/dao/0/1
+Imm. Facsimili 3951/1.2 : https://archives.bge-geneve.ch/ark:/17786/vtae78f994bf3242bef/dao/0/85</p>
+				</publicationStmt>
+					
+				<sourceDesc>
+					<p>Tipo: Appunti per le prime conferenze all’Università di Ginevra, in parte utilizzati per le prime lezioni del corso di Phonétique du grec et du latin 1891. Probabilmente destinati alla pubblicazione di una brochure.
+Date delle prime tre lezioni del corso di Phonétique du grec et du latin ricostruite cfr. Chidichimo,
+2009, CFS 62.
+Testo in redazione quasi finale, con correzioni, cancellature, aggiunte interlineari e frasi incomplete.
+Edizioni francese:
+Bouquet-Engler 2002: pp. 143-172 (Utilizzata qui);
+Engler 1967-74: 3283-3285.
+Traduzione italiana: basata sull’edizione Bouquet-Engler (2002), con note di commento parziale
+in E. Fadda 2006: pp. 85-121.
+Studi critici: AA.VV., 2009, «Sur Saussure à Genève en 1891», in Cahiers Ferdinand de Saussure
+67, pp. 217-312.</p>
+				</sourceDesc>
+		</fileDesc>
+		
+		<profileDesc>
+			<langUsage>
+				<language ident = "fr">French</language>
+			</langUsage>
+		</profileDesc>
+	</teiHeader>
+
+<!--
+	INIZIO DEL TESTO
+	
+	NOTE:
+		<rs> è reference string
+-->
+
+
+
+	<facsimile>
+		<surface xml:id = "facp1" start = "#p1">
+			<graphic url='prolusioni2_p1.jpg' width='6048.4px' height='4032.4px' />
+			<zone xml:id="facp1-n" ulx="3118" uly="282" lrx="3358" lry="491" />
+			<zone xml:id="facp1-1" ulx="3078" uly="254" lrx="5339" lry="2192" />
+			<zone xml:id="facp1-2" ulx="3077" uly="2006" lrx="5334" lry="2432" />
+			<zone xml:id="facp1-3" ulx="3073" uly="2399" lrx="5343" lry="3137" />
+			<zone xml:id="facp1-4">
+				<!-- Parte relativa alla pagina 1 (ultime righe)-->
+				<surface>
+					<graphic url='prolusioni2_p1.jpg' width='6048.4px' height='4032.4px' />
+					<zone ulx="3075" uly="3077" lrx="5338" lry="3702" />
+				</surface>
+				
+				<!-- Parte relativa alla pagina 2 (prima riga) -->
+				<surface>
+					<graphic url='prolusioni2_p2.jpg' width='6047.7px' height='4031.7px' />
+					<zone ulx="665" uly="389" lrx="2912" lry="741" />
+				</surface>
+			</zone>
+		</surface>
+
+		<surface xml:id = "facp2" start = "#p2">
+			<graphic url='prolusioni2_p2.jpg' width='6047.7px' height='4031.7px' />
+			<zone xml:id="facp2-n" ulx="844" uly="411" lrx="1132" lry="589" />
+			<zone xml:id="facp2-1" ulx="664" uly="390" lrx="2912" lry="1517" />
+			<zone xml:id="facp2-2" ulx="661" uly="1358" lrx="2913" lry="2617" />
+			<zone xml:id="facp2-3" ulx="659" uly="2611" lrx="2880" lry="3856" />
+		</surface>
+	</facsimile>
+			
+	<text>
+		<group>
+			<text xml:lang = "fr">
+				<body>
+				<pb xml:id = "p1" n = "1" facs = "#facp1" />
+					<p xml:id = "p1-1" facs = "#facp1-1">
+						<lb /><note place="margin" facs = "#facp2-n">1</note>Si, comme nous venons de le poser en fait, <w>au-
+						<lb />cune</w> interruption, aucune scission, aucun
+						<lb />hiatus <subst resp="#AM"><del rend="overstrike" cert="medium" resp="#AM">ne peut jamais <w><unclear reason="illegible" extent="2 characters"/></w> <w><unclear reason="illegible" extent="7 characters"/></w></del> <add place="above">n’est imaginable</add></subst> dans la
+						<lb /><add place="margin"><term>tradition</term></add> <del rend="overstrike" cert="medium" resp="#AM">transmission</del> de la <term>langue</term>, s’il est <add place="above" resp="#AM"><del rend="overstrike"><w><unclear reason="illegible"/></w></del></add> vrai que
+						<lb />la <term>langue</term> <del rend="overstrike" cert="high" resp="#AM"><unclear reason="illegible"/></del>
+						<lb /><add place="margin">du lendemain</add> <del rend="overstrike" cert="high" resp="#AM"><unclear reason="illegible"/></del>
+						<lb /><add place="margin">a toujours</add> <del rend="overstrike" cert="high" resp="#AM"><unclear reason="illegible"/></del>
+						<lb /><add place="margin">existé</add> <del rend="overstrike" cert="high" resp="#AM"><unclear reason="illegible"/></del>
+						<lb /><add place="margin">la</add> <del rend="overstrike" cert="high" resp="#AM"><unclear reason="illegible"/></del>
+						<lb /><add place="margin">veille</add> <del rend="overstrike" cert="high" resp="#AM"><unclear reason="illegible"/></del>
+						<lb /><del rend="overstrike" cert="high" resp="#AM"><unclear reason="illegible"/></del>
+						<lb /><add place="above">sous la même <term>forme</term>,</add> on demande comment il se fait que nous ne <term>parlions</term>
+						<lb />pas aujourd’hui le <rs type="language">latin</rs> que parlait <del rend="overstrike" resp="#AM"><persName><w cert = "medium">Virgile</w></persName></del>
+						<lb /><persName>Jules César</persName>, comment <del rend="overstrike" resp="#AM">il</del> il se fait que <persName>Jules
+						<lb /><add place="margin">César</add></persName> <del rend="overstrike" cert="high" resp="#AM"><unclear reason="illegible"/></del> n’ait pas parlé l’<rs type="language">indo-européen</rs>
+						<lb />de ses premiers ancêtres.</p><p xml:id="p1-2" facs = "#facp1-2"> Mon Dieu, <add place="above">je suis persuadé que</add> ceci est
+						<lb />un peu l’<term>histoire</term> de tout ce que nous voyons
+						<lb />se passer autour de nous ou en nous-mêmes.</p>
+					<p xml:id="p1-3" facs = "#facp1-3">
+						<lb /><add place="margin">Un original</add> <subst resp="#AM"><del rend="overstrike" cert="medium">Un</del><add place="above">nommé <persName>Boguslawski</persName></add></subst> a dernièrement <subst resp="#AM"><del rend="overstrike"><w cert="low">vu</w></del><add place="above">fait</add></subst> annoncer dans une
+						<lb />ville <subst resp="#AM"><del rend="overstrike" cert="high">d'<country>Allemagne</country></del><add place="above">de <country>Russie</country></add></subst> l’ouverture d’une <rs>exposition
+						<lb />d’un nouveau genre</rs> : c’étaient simplement
+						<lb />480 <term>portraits photographiques</term>, <del rend="overstrike" resp="#AM" cert="low">et portrait</del>
+						<lb /><del rend="overstrike" resp="#AM" cert="medium">le</del>représentant tous la même personne, lui,
+						<lb /><persName>Boguslawski</persName>, et identiquement dans la même pose.</p>
+					<p xml:id="p1-4" facs = "#facp1-4">
+						<lb /><offset>Depuis</offset> <time>20 ans</time> avec une régularité <w>ad
+						<lb />mirable</w>, le premier et le quinze de chaque mois, <subst resp="#AM"><del rend="overstrike" cert="high"><persName><w>Bogu
+						<lb />slawski</w></persName></del><add place="margin" cert="medium">cet homme </add><add place="above" cert="medium">dévoué à la</add></subst> <subst resp="#AM"><del rend="overstrike"><unclear reason="illegible"/></del><add place="above"><term>science</term> se rendait</add></subst>chez son <term>photographe</term>,
+						<lb />et <add place="above" cert="medium" resp="#AM">il</add> se trouvait maintenant en état de faire
+						<lb /><note place="margin">#</note>profiter le public du fruit accumulé de
+						
+				<pb xml:id = "p2" n = "2" facs = "#facp2" />
+						<lb /><note place="margin">2</note><note place="above">2</note><del rend="overstrike" resp="#AM"><unclear reason="illegible"/></del>ses labeurs.</p>
+					<p xml:id="p2-1" facs = "#facp2-1">
+						<lb /><note place="margin"><del rend="overstrike" resp="#AM"><unclear reason="illegible"/></del></note>Jen’ai pas besoin de vous dire que,
+						<lb />si <add place="above" resp="#AM">dans cette <rs>exposition</rs></add> on prenait <subst resp="#AM"><del rend="overstrike"><unclear reason="illegible"/></del><add place="above">sur la paroi</add></subst> 2 <term><w>photo
+						<lb />graphies</w></term> contiguës quelconques, on avait
+						<lb />le même <persName>Boguslawski</persName>, mais que si
+						<lb />l’on prenait le n°480 et le n°1 on
+						<lb />avait 2 <persName><choice resp="#AM"><abbr type="suspension">Bogusl</abbr><expan>Bogusl<ex>awski</ex></expan></choice></persName>.</p><p xml:id="p2-2" facs = "#facp2-2"> _ De même, <del rend="overstrike" resp="#AM">si</del>
+						<lb /><add place="margin">si</add> l’on avait pu <add place="above" resp="#AM">non pas <term>photographier</term> mais </add><term>phonographier</term>,
+						<lb /><add place="margin" resp="#AM">au jour le jour</add> dès l’<term>origine</term>, tout ce qui a été exprimé
+						<lb />en <term>parole</term> sur le globe ou sur une partie du
+						<lb />globe, on aurait des <term>images <add place="above" resp="#AM">de langue</add></term> toujours
+						<lb />ressemblantes d’un jour à l’autre, mais
+						<lb />considérablement <del rend="overstrike" resp="#AM"><unclear reason="illegible"/></del> différentes et parfois
+						<lb /><subst resp="#AM"><del rend="overstrike" cert="high">énormément</del><add place="margin">incalculablement</add></subst> différentes de <time>500 ans</time> en <time>500
+						<lb />ans</time>, ou même de <time>100 ans</time> à <time>100 ans</time>.</p>
+					<p xml:id="p2-3" facs = "#facp2-3">
+						<lb />Nous arrivons ainsi au second
+						<lb /><term>principe</term> <del rend="overstrike" cert="medium" resp="#AM">universel</del>, de <term>valeur universelle</term> comme le premier,
+						<lb /><del rend="overstrike" resp="#AM"><unclear reason="illegible"/></del>
+						<lb /><add place="margin" resp="#AM">dont la possession <del rend="overstrike" cert="medium">qui</del> peut faire connaître ce qu’est </add><term>l’histoire des langues</term> : <subst resp="#AM"><del rend="overstrike" cert="medium">qui est le <unclear reason="illegible" extent="5 characters"/></del> <add place="above">c’est le <term>point</term></add></subst>
+						<lb /><term>de vue</term> <del rend="overstrike" cert="high" resp="#AM">du mouvement</del> du <del rend="overstrike" resp="#AM"><unclear reason="illegible"/></del>
+						<lb /><term>mouvement <add place="above">de la langue</add> dans le temps</term>, mais
+						<lb />d’un mouvement <add place="above" resp="#AM"><sic cert="medium">ou</sic></add> qui à aucun
+						<lb />moment, car tout est là, n’<subst resp="#AM"><del rend="overstrike"><unclear reason="illegible"/></del><add place="above">arrive à</add></subst>
+						<lb /><subst resp="#AM"><del cert="medium">contribution</del><add place="margin">être en conflit</add></subst> avec <subst resp="#AM"><del rend="overstrike"><unclear reason="illegible"/></del><add place="below">le premier <term>principe</term> de l’</add></subst><term>unité <add place="below">de la langue</add> dans le temps.</term></p>
+				</body>
+			</text>
+			
+			<text xml:lang = "it">
+				<body>
+					<p corresp = "#p1-1">Se, come abbiamo appurato, nessuna
+interruzione, nessuna scissione, nessuno iato è
+immaginabile nella tradizione della lingua, se è vero
+che la lingua del giorno dopo è sempre esistita, nella
+stessa forma, il giorno prima, ci si domanda com’è
+che noi non parliamo oggi il latino che parlava
+Giulio Cesare, e com’è che Giulio Cesare non abbia
+parlato l’indoeuropeo dei suoi primi antenati.</p>
+<p corresp = "#p1-2">Mio Dio, sono persuaso che questa sia un po’ la
+storia di tutto ciò che vediamo accadere attorno a
+noi e in noi stessi.</p>
+<p corresp = "#p1-3">Un tipo originale di nome
+Boguslawski ha ultimamente annunciato in una città
+della Russia, l’apertura di un’esposizione di nuovo
+genere: si trattava semplicemente di 480 ritratti
+fotografici rappresentanti tutti la stessa persona, cioè
+lo stesso Boguslawski, e sempre nella stessa posa.</p>
+<p corresp = "#p1-4">Da vent’anni, con regolarità ammirevole, il primo
+e il quindici di ogni mese, quest’uomo votato alla
+scienza si recava dal suo fotografo, e si trovava ora
+in condizione di far godere il pubblico del frutto
+accumulato delle
+
+sue fatiche.</p> <p corresp = "#p2-1">Non ho bisogno di
+dirvi che, se in quest’esposizione si prendessero due
+fotografie contigue qualsiasi sulla parete, si avrebbe
+lo stesso Boguslawski, ma se si prendessero la
+n°480 e la n° 1 si avrebbero due Boguslawski.</p>
+<p corresp = "#p2-2">Ugualmente, se si fosse potuto non fotografare, ma
+fonografare giorno per giorno dall’origine tutto ciò
+che è stato espresso verbalmente sul pianeta o su
+una parte di esso, si avrebbero delle immagini di
+lingua sempre rassomigliantisi da un giorno
+all’altro, ma considerevolmente differenti e a volte
+differenti in modo incalcolabile di 500 in 500 anni,
+o anche di 100 in 100 anni.</p>
+<p corresp = "#p2-3">Arriviamo così al secondo principio, di valore
+universale come il primo, il cui possesso può far
+conoscere quel che è la storia delle lingue: è il punto
+di vista del movimento della lingua nel tempo, ma di
+un movimento che a nessun momento, giacché tutto
+è lì, arriva ad essere in conflitto col primo principio
+dell’unità della lingua nel tempo.</p>
+				</body>
+			</text>
+		</group>
+	</text>
+</TEI>
+
+
+
+
+
